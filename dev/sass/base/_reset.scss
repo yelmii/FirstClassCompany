@@ -1,0 +1,104 @@
+@use "../abstracts/variables" as variables;
+
+//리셋
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	min-width: 1400px;
+	color: #333;
+	font-family: "NotoSansKR";
+	line-height: 130%;
+
+	&.iframe {
+		min-width: auto;
+		padding-right: 10px;
+	}
+}
+
+iframe {
+	border: 0;
+}
+
+img {
+	border: 0;
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+}
+
+ul,
+li,
+ol {
+	list-style: none;
+}
+
+address {
+	font-style: normal;
+}
+
+p {
+	font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 16px;
+	font-weight: normal;
+}
+
+//폼요소에 폰트적용
+input::placeholder {
+	font-family: "NotoSansKR";
+}
+
+input:-ms-input-placeholder {
+	font-family: "NotoSansKR";
+}
+
+input::-webkit-input-placeholder {
+	font-family: "NotoSansKR";
+}
+
+input {
+	font-family: "NotoSansKR";
+}
+
+textarea {
+	font-family: "NotoSansKR";
+}
+
+textarea::placeholder {
+	font-family: "NotoSansKR";
+}
+
+button {
+	font-family: "NotoSansKR";
+}
+
+textarea {
+	padding: 10px;
+	border-radius: 4px;
+	border: 1px solid variables.$color-gray-300;
+	resize: none;
+}
+
+//폰트말줄임표
+.overflow_hid {
+	overflow: hidden;
+	text-align: left;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	display: block;
+}
