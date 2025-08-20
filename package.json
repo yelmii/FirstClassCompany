@@ -1,20 +1,20 @@
 {
-	"dependencies": {
-		"nunjucks": "^3.2.4"
-	},
-	"name": "firstclasscompany",
-	"version": "1.0.0",
-	"main": "index.js",
-	"devDependencies": {
-		"@11ty/eleventy": "^3.1.2"
-	},
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "eleventy",
-		"serve": "eleventy --serve"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"description": ""
+  "dependencies": {
+    "nunjucks": "^3.2.4"
+  },
+  "name": "firstclasscompany",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "eleventy",
+    "serve": "eleventy --serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

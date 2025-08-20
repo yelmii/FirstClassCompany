@@ -1,7 +1,9 @@
-@use "abstracts/variables" as variables;
+@use "abstracts/variables";
 @use "abstracts/mixin";
 
 @use "base/reset";
 @use "base/typo";
 
+@use "layout/header";
 @use "layout/main";
+@use "layout/footer";

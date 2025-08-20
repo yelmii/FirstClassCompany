@@ -1,5 +1,9 @@
-node_modules
-dist
+# 패키지 디렉토리
+node_modules/
 
+# 빌드결과물
+dist/
 
-.DS_Store
+# Mac OS
+**/.DS_Store
+
