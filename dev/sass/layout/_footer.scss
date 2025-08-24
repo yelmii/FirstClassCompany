@@ -1,0 +1,62 @@
+@use "../abstracts/variables" as variables;
+@use "../abstracts/mixin" as mixin;
+.footer{
+    background: variables.$color-primary-dark;
+        color: variables.$color-gray-300;
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:  3rem 4rem;
+    }
+    .logo-footer{
+        width: auto;
+        margin-bottom: 1rem;
+    }
+    .comp-info-wrap{
+        div{
+            display: inline-block;
+            margin-bottom: .4rem;
+            margin-right: 1rem;
+        }
+        span{
+            display: inline-block;
+            padding-right: .5rem;
+            font-weight: 500;
+        }
+    }
+    .copyright{
+        font-weight: 200;
+        font-size: .8rem;
+    }
+    &-tel-wrap{
+        font-size: 1.2rem;
+        line-height: normal;
+        color: #fff;
+        .tel{
+            font-size: 2rem;
+            font-weight: 600;
+
+        }
+    }
+    &-sms-list{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        li a{
+            display: block;
+            width: 3rem;
+            transition: .2s;;
+            img{
+                width: 100%;
+            }
+            &:hover{
+                filter:brightness(0.7);
+            }
+        }
+        &.hidden{
+            display: none;
+        }
+    }
+}

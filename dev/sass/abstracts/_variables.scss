@@ -1,6 +1,7 @@
-$color-primary-bg: #eeebfc;
-$color-primary: #6156c3;
-$color-primary-dark: #44248d;
+$color-primary-light: #DAE4EE;
+$color-primary: #3674B5;
+$color-primary-dark: #152D47;
+
 
 //GrayScale
 $color-gray-50: #fafafa;
@@ -34,3 +35,6 @@ $color-modal-5: rgba(0, 0, 0, 0.5);
         @return inset 0px 0px 4px 50px rgba(0 0 0 / 15%);
     }
 }
+
+
+$static-font-size:15px;

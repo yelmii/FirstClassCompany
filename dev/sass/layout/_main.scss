@@ -1,0 +1,51 @@
+@use "../abstracts/variables" as variables;
+@use "../abstracts/mixin" as mixin;
+.section {
+    padding: 6rem 4rem;
+}
+.main-banner {
+    background: url("../../asset/images/banner.jpg") no-repeat center left/cover;
+    .container {
+        position: relative;
+        height: 100%;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 10%;
+    }
+    &-title,
+    &-title-sub {
+        font-size: 4rem;
+        color: #fff;
+        font-weight: 800;
+        text-align: right;
+        line-height: normal;
+    }
+    &-title-sub {
+        font-size: 2rem;
+        font-weight: 400;
+    }
+}
+
+.bg-pipe {
+    background: url("../../asset/images/bg-pipe.png") no-repeat 26% top/contain;
+}
+.contact-wrap {
+    background: variables.$color-primary-light;
+    .container {
+        position: relative;
+        &:after {
+            content: "Contact us";
+            font-weight: 900;
+            position: absolute;
+            font-size: 6rem;
+            top: -12rem;
+            left: 0;
+            display: block;
+            color: variables.$color-primary;
+            line-height: normal;
+            letter-spacing: -2px;
+        }
+    }
+}

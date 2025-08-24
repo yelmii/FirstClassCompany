@@ -1,0 +1,36 @@
+@use "../abstracts/variables" as variables;
+
+.left-floating-nav {
+    position: absolute;
+    top: 500px;
+    right: 30px;
+    background: variables.$color-primary-light;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    a {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        font-size: 0.8rem;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid variables.$color-gray-300;
+        padding: 1rem;
+        transition: .2s;;
+        &:hover{
+            box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+            
+        }
+        img {
+            width: 40px;
+        }
+        &:last-child {
+            border-bottom: 0;
+
+            img {
+                width: 18px;
+            }
+        }
+    }
+}

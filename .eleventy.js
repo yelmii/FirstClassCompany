@@ -1,13 +1,13 @@
 module.exports = function (eleventyConfig) {
 	return {
 		dir: {
-			input: "src",
-			includes: "_Shared",
-			data: "_data",
-			output: "dist/Views",
+			input: "src/pages",
+			includes: "../_Shared",
+			output: "dist",
 		},
-		pathPrefix: "/",
 		templateFormats: ["njk", "md", "html"],
+		htmlTemplateEngine: "njk",
+    	markdownTemplateEngine: "njk"
 	};
 };
 /*

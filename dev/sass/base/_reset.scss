@@ -9,15 +9,19 @@
 
 body {
 	width: 100%;
-	min-width: 1400px;
-	color: #333;
+	color: variables.$color-gray-950;
 	font-family: "NotoSansKR";
 	line-height: 130%;
-
+	font-size: variables.$static-font-size;
 	&.iframe {
 		min-width: auto;
 		padding-right: 10px;
 	}
+}
+
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 iframe {
@@ -31,7 +35,7 @@ img {
 
 a {
 	text-decoration: none;
-	color: #333;
+	color: variables.$color-gray-950;
 }
 
 ul,
@@ -85,6 +89,9 @@ textarea::placeholder {
 
 button {
 	font-family: "NotoSansKR";
+	color: variables.$color-gray-950;
+	border: 0;
+	background: transparent;
 }
 
 textarea {

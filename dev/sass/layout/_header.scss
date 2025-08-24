@@ -1,0 +1,37 @@
+@use "../abstracts/variables" as variables;
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: .2s;
+    z-index: 100;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo{
+        display: block;
+        width: 150px;
+    }
+    .nav ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        li a{
+           display: block;
+           padding: 1.5rem 2rem;
+           color: #fff; 
+        }
+    }
+    &.on {
+        background: rgba(#fff,0.7);
+        backdrop-filter: blur(2px);
+        .nav ul li a{
+            color: variables.$color-gray-950;;
+        }
+    }
+}
