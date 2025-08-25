@@ -1,54 +1,93 @@
+@use "../abstracts/mixin" as mixin;
+@use "../abstracts/variables" as variables;
 //폰트페이스
 @font-face {
-	font-family: "NotoSansKR";
-	src: url(/asset/font/NotoSansKR-Thin.ttf) format("truetype");
-	font-weight: 100;
+    font-family: "NotoSansKR";
+    src: url(/asset/font/NotoSansKR-Thin.ttf) format("truetype");
+    font-weight: 100;
 }
 @font-face {
-	font-family: "NotoSansKR";
-	src: url(/asset/font/NotoSansKR-ExtraLight.ttf) format("truetype");
-	font-weight: 200;
+    font-family: "NotoSansKR";
+    src: url(/asset/font/NotoSansKR-ExtraLight.ttf) format("truetype");
+    font-weight: 200;
 }
 @font-face {
-	font-family: "NotoSansKR";
-	src: url(/asset/font/NotoSansKR-Light.ttf) format("truetype");
-	font-weight: 300;
+    font-family: "NotoSansKR";
+    src: url(/asset/font/NotoSansKR-Light.ttf) format("truetype");
+    font-weight: 300;
 }
 @font-face {
-	font-family: "NotoSansKR";
-	src: url(/asset/font/NotoSansKR-Regular.ttf) format("truetype");
-	font-weight: 400;
+    font-family: "NotoSansKR";
+    src: url(/asset/font/NotoSansKR-Regular.ttf) format("truetype");
+    font-weight: 400;
 }
 @font-face {
-	font-family: "NotoSansKR";
-	src: url(/asset/font/NotoSansKR-Medium.ttf) format("truetype");
-	font-weight: 500;
+    font-family: "NotoSansKR";
+    src: url(/asset/font/NotoSansKR-Medium.ttf) format("truetype");
+    font-weight: 500;
 }
 @font-face {
-	font-family: "NotoSansKR";
-	src: url(/asset/font/NotoSansKR-SemiBold.ttf) format("truetype");
-	font-weight: 600;
+    font-family: "NotoSansKR";
+    src: url(/asset/font/NotoSansKR-SemiBold.ttf) format("truetype");
+    font-weight: 600;
 }
 @font-face {
-	font-family: "NotoSansKR";
-	src: url(/asset/font/NotoSansKR-Bold.ttf) format("truetype");
-	font-weight: 700;
+    font-family: "NotoSansKR";
+    src: url(/asset/font/NotoSansKR-Bold.ttf) format("truetype");
+    font-weight: 700;
 }
 @font-face {
-	font-family: "NotoSansKR";
-	src: url(/asset/font/NotoSansKR-ExtraBold.ttf) format("truetype");
-	font-weight: 800;
+    font-family: "NotoSansKR";
+    src: url(/asset/font/NotoSansKR-ExtraBold.ttf) format("truetype");
+    font-weight: 800;
 }
 @font-face {
-	font-family: "NotoSansKR";
-	src: url(/asset/font/NotoSansKR-Black.ttf) format("truetype");
-	font-weight: 900;
+    font-family: "NotoSansKR";
+    src: url(/asset/font/NotoSansKR-Black.ttf) format("truetype");
+    font-weight: 900;
 }
 
-.main-title{
-	font-size: 1.3rem;
-	font-weight: 600;
-	&-sub{
-		font-size: 1rem;
-	}
+.text-center{
+	text-align: center;
+}
+.color-primary{
+	color: variables.$color-primary;
+}
+.page-title-wrap {
+    background: url("../../asset/images/bg-title.png") no-repeat center/cover;
+    height: 400px;
+    color: #fff;
+    padding-top: 68px;
+    .container {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+    .page-title {
+        font-weight: 600;
+        font-size: 3rem;
+        line-height: normal;
+        margin-bottom: 0.5rem;
+    }
+    span {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+}
+
+.highlight {
+    position: relative;
+    font-size: 1.4rem;
+    font-weight: 600;
+    display: inline-block;
+    z-index: 0;
+    &:after {
+        z-index: -1;
+        @include mixin.afterIcon;
+        @include mixin.centerX;
+        height: 80%;
+        width: 105%;
+        top: 8px;
+        background: rgba(variables.$color-gold, 0.5);
+    }
 }

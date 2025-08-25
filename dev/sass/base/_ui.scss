@@ -51,8 +51,8 @@ $btnColors: (
         a {
             display: block;
             font-weight: 600;
-            .img-wrap{
-                margin-bottom: .6rem;
+            .img-wrap {
+                margin-bottom: 0.6rem;
             }
             span {
                 font-size: 0.8rem;
@@ -63,41 +63,41 @@ $btnColors: (
                 text-overflow: ellipsis;
                 font-weight: 400;
             }
-            &:hover{
-                img{
+            &:hover {
+                img {
                     width: 110%;
                 }
             }
         }
     }
 }
-.main-list-2{
+.main-list-2 {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
-    li{
+    li {
         position: relative;
-        width: calc((100% / 3) - .69rem);
+        width: calc((100% / 3) - 0.69rem);
         height: 200px;
         background: variables.$color-primary-dark;
-        .cont{
+        .cont {
             position: absolute;
             right: 0;
             top: 0;
             padding: 2rem;
             text-align: right;
             color: #fff;
-            .title{
+            .title {
                 font-weight: 600;
                 font-size: 1.2rem;
-                margin-bottom: .5rem;
+                margin-bottom: 0.5rem;
                 display: block;
             }
         }
-        &:nth-child(3){
+        &:nth-child(3) {
             background: transparent;
-            .cont{
+            .cont {
                 font-size: 1.6rem;
                 font-weight: 600;
                 color: variables.$color-gray-950;
@@ -107,7 +107,7 @@ $btnColors: (
         }
     }
 }
-.btn-top{
+.btn-top {
     cursor: pointer;
     position: fixed;
     bottom: 1rem;
@@ -118,31 +118,56 @@ $btnColors: (
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    font-size: .6rem;
+    font-size: 0.6rem;
     gap: 4px;
     background: variables.$color-gray-600;
-    opacity: .8;
-    transition: .2s;
+    opacity: 0.8;
+    transition: 0.2s;
     color: #fff;
     border-radius: 4px;
-    img{
-    width: 18px;
+    img {
+        width: 18px;
     }
-    &:hover{
+    &:hover {
         opacity: 1;
     }
-    
 }
 
-.img-wrap{
+.img-wrap {
     position: relative;
     overflow: hidden;
     width: 100%;
     min-height: 200px;
-    img{
+    img {
         width: 100%;
         position: absolute;
         @include mixin.centerXY;
-        transition: .2s;
+        transition: 0.2s;
     }
+}
+.card {
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.box-primary-light {
+    background: variables.$color-primary-light;
+    padding: 2rem;
+    width: 50%;
+    margin: auto;
+    .title {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+    }
+    .tel {
+        font-size: 2.5rem;
+        font-weight: 600;
+        line-height: normal;
+        margin-bottom: 1.8rem;
+        display: block;
+        color: variables.$color-primary;
+    }
+}
+.p {
+    line-height: 160%;
 }

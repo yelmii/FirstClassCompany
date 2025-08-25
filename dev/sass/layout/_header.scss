@@ -28,8 +28,8 @@
         }
     }
     &.on {
-        background: rgba(#fff,0.7);
-        backdrop-filter: blur(2px);
+        background: rgba(#fff,0.8);
+        backdrop-filter: blur(4px);
         .nav ul li a{
             color: variables.$color-gray-950;;
         }

@@ -35,6 +35,9 @@
     background: variables.$color-primary-light;
     .container {
         position: relative;
+        display: flex;
+        gap: 4rem;
+        height: 20rem;
         &:after {
             content: "Contact us";
             font-weight: 900;
@@ -47,5 +50,29 @@
             line-height: normal;
             letter-spacing: -2px;
         }
+    }
+    .card {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        line-height: normal;
+        img {
+            width: auto;
+            margin-bottom: 1rem;
+        }
+        a {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: variables.$color-primary;
+        }
+        span {
+            font-size: 1rem;
+        }
+    }
+    .img-wrap {
+        width: 60%;
     }
 }
