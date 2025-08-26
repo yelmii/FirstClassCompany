@@ -2,6 +2,10 @@
 @use "../abstracts/mixin" as mixin;
 .section {
     padding: 6rem 4rem;
+    &-sub{
+        padding: 4rem;
+
+    }
 }
 .main-banner {
     background: url("../../asset/images/banner.jpg") no-repeat center left/cover;
