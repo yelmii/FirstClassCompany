@@ -1,0 +1,16 @@
+@use "../abstracts/variables" as variables;
+.about-wrap {
+	position: relative;
+
+	.title {
+		font-size: 3rem;
+		color: variables.$color-primary;
+		opacity: 0.3;
+		font-weight: 800;
+		letter-spacing: -1px;
+	}
+	p {
+		line-height: 180%;
+		font-size: 1.1rem;
+	}
+}
