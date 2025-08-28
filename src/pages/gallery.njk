@@ -15,71 +15,18 @@ permalink: /gallery.html
 
 <section class="container section-sub">
     <ul class="gallery-list">
+        {% for i in range(0, 10) %} 
         <li>
             <a href="#none" title="제목">
                 <div class="img-wrap">
                     <img src="asset/images/gallery/testImg_1.png" alt="제목">
                 </div>
                 <div class="cont-wrap">
-                    <h4 class="title">시공업체명</h4>
-                    <h5 class="title-sub">시공업체명</h5>
+                    <h4 class="title">시공업체명 {{ i }}</h4>
+                    <h5 class="title-sub">시공업체{{ i }} 블로그 게시글의 첫 줄을 작성하면 됩니다. 길게 작성하더라도 한줄만 보이고, 2줄 이상 보이게 하고싶으면 연락주세요.</h5>
                 </div>
             </a>
         </li>
-         <li>
-            <a href="#none" title="제목">
-                <div class="img-wrap">
-                    <img src="asset/images/gallery/testImg_1.png" alt="제목">
-                </div>
-                <div class="cont-wrap">
-                    <h4 class="title">시공업체명</h4>
-                    <h5 class="title-sub">시공업체명</h5>
-                </div>
-            </a>
-        </li>
-         <li>
-            <a href="#none" title="제목">
-                <div class="img-wrap">
-                    <img src="asset/images/gallery/testImg_1.png" alt="제목">
-                </div>
-                <div class="cont-wrap">
-                    <h4 class="title">시공업체명</h4>
-                    <h5 class="title-sub">시공업체명</h5>
-                </div>
-            </a>
-        </li>
-         <li>
-            <a href="#none" title="제목">
-                <div class="img-wrap">
-                    <img src="asset/images/gallery/testImg_1.png" alt="제목">
-                </div>
-                <div class="cont-wrap">
-                    <h4 class="title">시공업체명</h4>
-                    <h5 class="title-sub">시공업체명</h5>
-                </div>
-            </a>
-        </li>
-         <li>
-            <a href="#none" title="제목">
-                <div class="img-wrap">
-                    <img src="asset/images/gallery/testImg_1.png" alt="제목">
-                </div>
-                <div class="cont-wrap">
-                    <h4 class="title">시공업체명</h4>
-                    <h5 class="title-sub">시공업체명</h5>
-                </div>
-            </a>
-        </li>
-         <li>
-            <a href="#none" title="제목">
-                <div class="img-wrap">
-                    <img src="asset/images/gallery/testImg_1.png" alt="제목">
-                </div>
-                <div class="cont-wrap">
-                    <h4 class="title">시공업체명시공업체명시공업체명시공업체명시공업체명</h4>
-                    <h5 class="title-sub">시공업체명시공업체명시공업체명시공업체명시공업체명시공업체명시공업체명</h5>
-                </div>
-            </a>
-        </li>
+        {% endfor %}
     </ul>
 </section>
