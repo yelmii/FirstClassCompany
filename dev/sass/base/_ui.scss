@@ -45,6 +45,13 @@ $btnColors: (
 	align-items: center;
 	justify-content: space-between;
 	gap: 3rem;
+	@include mixin.tablet {
+		gap: 1rem;
+	}
+	@include mixin.mobile {
+		flex-direction: column;
+		gap: 1rem;
+	}
 	li {
 		width: 100%;
 		min-width: 0;
@@ -65,7 +72,7 @@ $btnColors: (
 			}
 			&:hover {
 				img {
-					width: 110%;
+					transform: scale(1.2, 1.2);
 				}
 			}
 		}
@@ -82,12 +89,14 @@ $btnColors: (
 		height: 200px;
 		background: variables.$color-primary-dark;
 		.cont {
+			width: 100%;
 			position: absolute;
 			right: 0;
 			top: 0;
 			padding: 2rem;
 			text-align: right;
 			color: #fff;
+
 			.title {
 				font-weight: 600;
 				font-size: 1.2rem;
@@ -102,6 +111,37 @@ $btnColors: (
 				font-weight: 600;
 				color: variables.$color-gray-950;
 				padding: 0;
+			}
+		}
+	}
+	@include mixin.tablet {
+		li {
+			height: 160px;
+			.cont {
+				font-size: 0.8rem;
+				padding: 1rem;
+				.title {
+					font-size: 1rem;
+				}
+			}
+			&:nth-child(3) .cont {
+				font-size: 1.2rem;
+			}
+		}
+	}
+	@include mixin.mobile {
+		flex-direction: column;
+		li {
+			width: 100%;
+			order: 1;
+			&:nth-child(3) {
+				order: 0;
+				height: auto;
+
+				.cont {
+					text-align: left;
+					position: relative;
+				}
 			}
 		}
 	}
@@ -178,17 +218,18 @@ $btnColors: (
 }
 
 .img-wrap {
-	position: relative;
 	overflow: hidden;
 	width: 100%;
-	min-height: 200px;
+	//min-height: 200px;
 	img {
 		width: 100%;
-		position: absolute;
-		@include mixin.centerXY;
+		//position: relative;
+		//@include mixin.centerXY;
 		transition: 0.2s;
+		vertical-align: top;
 	}
 }
+
 .card {
 	background: #fff;
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -213,7 +254,7 @@ $btnColors: (
 		}
 		.tel {
 			font-size: 3rem;
-			font-weight: 800;
+			font-weight: 900;
 			display: block;
 			margin-bottom: 2rem;
 			color: variables.$color-primary;

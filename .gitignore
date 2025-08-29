@@ -1,9 +1,6 @@
 # 패키지 디렉토리
 node_modules/
 
-# 빌드결과물
-dist/
-
 # Mac OS
 **/.DS_Store
 

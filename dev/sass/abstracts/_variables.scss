@@ -1,7 +1,8 @@
-$color-primary-light: #DAE4EE;
-$color-primary: #3674B5;
-$color-primary-dark: #152D47;
+@use "../abstracts/mixin" as mixin;
 
+$color-primary-light: #dae4ee;
+$color-primary: #3674b5;
+$color-primary-dark: #152d47;
 
 //GrayScale
 $color-gray-50: #fafafa;
@@ -29,12 +30,9 @@ $color-modal-1: rgba(0, 0, 0, 0.3);
 $color-modal-5: rgba(0, 0, 0, 0.5);
 
 @function SetBtnHover($IsDark) {
-    @if $IsDark {
-        @return inset 0 0 4px 50px rgb(255 255 255 / 10%);
-    } @else {
-        @return inset 0px 0px 4px 50px rgba(0 0 0 / 15%);
-    }
+	@if $IsDark {
+		@return inset 0 0 4px 50px rgb(255 255 255 / 10%);
+	} @else {
+		@return inset 0px 0px 4px 50px rgba(0 0 0 / 15%);
+	}
 }
-
-
-$static-font-size:15px;

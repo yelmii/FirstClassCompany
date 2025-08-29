@@ -1,20 +1,25 @@
 {
-    "liveSassCompile.settings.formats": [
-        {
-            "format": "compressed",
-            "extensionName": ".min.css",
-            "savePath": "~/../../dist/asset/css"
-        }
-    ],
-    "compile-hero.typescript-output-directory": "./../../dist/asset/js",
-    "compile-hero.scss-output-toggle": false,
-    "compile-hero.disable-compile-files-on-did-save-code": false,
-    "emeraldwalk.runonsave": {
-        "commands": [
-            {
-                "match": ".*\\.js$",
-                "cmd": "npx terser ${file} -o ${fileDirname}/${fileBasenameNoExtension}.min.js"
-            }
-        ]
-    }
+	"liveSassCompile.settings.formats": [
+		{
+			"format": "compressed",
+			"extensionName": ".min.css",
+			"savePath": "~/../../dist/asset/css"
+		}
+	],
+	"compile-hero.typescript-output-directory": "./../../dist/asset/js",
+	"compile-hero.scss-output-toggle": false,
+	"compile-hero.disable-compile-files-on-did-save-code": false,
+	"html.suggest.html5": true,
+	"editor.defaultFormatter": "okitavera.vscode-nunjucks-formatter",
+	"emmet.includeLanguages": {
+		"njk": "html",
+		"nunjucks": "html"
+	},
+	"files.associations": {
+		"*html": "html",
+		"*njk": "html"
+	},
+	"nunjucksFormat.style": true,
+	"nunjucksFormat.tagmerge": true,
+	"nunjucksFormat.tagsort": true
 }

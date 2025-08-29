@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as variables;
+@use "../abstracts/mixin" as mixin;
 
 //리셋
 * {
@@ -11,10 +12,17 @@ body {
 	width: 100%;
 	color: variables.$color-gray-950;
 	font-family: "NotoSansKR";
-	font-size: variables.$static-font-size;
+	font-size: 15px;
 	&.iframe {
 		min-width: auto;
 		padding-right: 10px;
+	}
+	@include mixin.tablet {
+		background: lightgreen;
+	}
+	@include mixin.mobile {
+		background: lightgray;
+		font-size: 14px;
 	}
 }
 
@@ -54,7 +62,7 @@ h4,
 h5,
 h6 {
 	font-size: 16px;
-	font-weight: normal;
+	font-weight: 400;
 }
 
 //폼요소에 폰트적용

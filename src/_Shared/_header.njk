@@ -1,16 +1,28 @@
 {% block header %}
+<!--PC버전 Start-->
 <header id="header" class="header">
-    <div class="container">
-        <a href="/" class="logo" alt="일등도시가스 로고" title="일등도시가스 로고">
-            <img src="./asset/images/logo-w.png" id="HeaderLogo" alt="일등도시가스 로고">
-        </a>
-        <nav class="nav">
-            <ul>
-                <li><a href="/about">일등도시가스</a></li>
-                <li><a href="/quote">견적문의</a></li>
-                <li><a href="/gallery">시공후기</a></li>
-            </ul>
-        </nav>
-    </div>
+	<div class="container">
+		<a href="/" class="logo" alt="일등도시가스 로고" title="일등도시가스 로고">
+			<img src="./asset/images/logo-w.png" id="HeaderLogo" alt="일등도시가스 로고" />
+		</a>
+		<nav class="nav">
+			<ul>
+				<li><a href="/about">일등도시가스</a></li>
+				<li><a href="/quote">견적문의</a></li>
+				<li><a href="/gallery">시공후기</a></li>
+			</ul>
+		</nav>
+	</div>
 </header>
+<!--PC버전 End-->
+
+<!--태블릿 & 모바일버전 Start-->
+<header id="M_Header" class="m-header">
+	<a href="/" class="logo" alt="일등도시가스 로고" title="일등도시가스 로고">
+		<img src="./asset/images/logo-w.png" id="HeaderLogo" alt="일등도시가스 로고" />
+	</a>
+	<a href="#none">메뉴</a>
+</header>
+<nav class="mobile-nav"></nav>
+<!--태블릿 & 모바일버전 End-->
 {% endblock header %}
