@@ -13,8 +13,8 @@ permalink: /index.html
                 일등 도시가스
             </div>
             <div class="btn-right">
-                <a href="/gallery" title="시공사례" class="btn-primary-dark width-100">시공사례 확인하기</a>
-                <a href="/quote" title="견적문의" class="btn-primary-light width-100">견적문의하기</a>
+                <a href="/gallery" title="시공사례" class="btn-primary-dark">시공사례 확인하기</a>
+                <a href="/quote" title="견적문의" class="btn-primary-light">견적문의하기</a>
             </div>
             </div>
         </div>
@@ -24,7 +24,7 @@ permalink: /index.html
             <h3 class="main-title mb-10">현장에서 증명된 기술력</h3>
             <h4 class="main-title-sub mb-20">다양한 산업과 공간에 맞춤시공한 사례를 확인하세요.</h3>
             <ul class="main-list-1">
-                {% for i in range(0, 2) %} 
+                {% for i in range(0, 3) %} 
                     <li>
                         <a href="#none">
                             <div class="img-wrap">
@@ -39,7 +39,7 @@ permalink: /index.html
         </section>
         <section  class="container section">
             <ul class="main-list-2">
-                {% for i in range(1, 6) %} 
+                {% for i in range(1, 7) %} 
                     {%if i == 3%}
                         <li>
                             <div class="cont">
@@ -54,58 +54,24 @@ permalink: /index.html
                                 음식점, 상가, 오피스 등 다양한 현장 경험 보유
                             </div>
                         </li>
-                    {%endfor%}
-
-                <li>
-                    <div class="cont">
-                        <span class="title">상업 및 업무용 배관 시공</span>
-                        음식점, 상가, 오피스 등 다양한 현장 경험 보유
-                    </div>
-                </li>
-                <li>
-                    <div class="cont">
-                        <span class="title">상업 및 업무용 배관 시공</span>
-                        음식점, 상가, 오피스 등 다양한 현장 경험 보유
-                    </div>
-                </li>
-                <li>
-                    <div class="cont">
-                        기술을 연결하고,<br>
-                        안전을 이어갑니다.
-                    </div>
-                </li>
-                <li>
-                    <div class="cont">
-                        <span class="title">상업 및 업무용 배관 시공</span>
-                        음식점, 상가, 오피스 등 다양한 현장 경험 보유
-                    </div>
-                </li>
-                <li>
-                    <div class="cont">
-                        <span class="title">상업 및 업무용 배관 시공</span>
-                        음식점, 상가, 오피스 등 다양한 현장 경험 보유
-                    </div>
-                </li>
-                <li>
-                    <div class="cont">
-                        <span class="title">상업 및 업무용 배관 시공</span>
-                        음식점, 상가, 오피스 등 다양한 현장 경험 보유
-                    </div>
-                </li>
+                    {%endif%}
+                {%endfor%}
             </ul>
         </section>
     </div>
     <section class="contact-wrap section">
         <div class="container">
-            <div class="card p-30 width-40">
-                <img src="asset/images/logo.png">
-                <a href="tel:02-476-6230" alt="02-476-6230" title="전화하기">02-476-6230</a>
-                <span>
-                    전화번호를 클릭하여 자세한 견적상담을 받아보세요.
-                </span>
-            </div>
-            <div class="img-wrap">
-                <img src="asset/images/contact.png" alt="홍보이미지">
+            <div class="flex">
+                <div class="card p-30 width-40">
+                    <img src="asset/images/logo.png">
+                    <a href="tel:02-476-6230" alt="02-476-6230" title="전화하기">02-476-6230</a>
+                    <span>
+                        전화번호를 클릭하여 자세한 견적상담을 받아보세요.
+                    </span>
+                </div>
+                <div class="img-wrap">
+                    <img src="asset/images/contact.png" alt="홍보이미지">
+                </div>
             </div>
         </div>
     </section>

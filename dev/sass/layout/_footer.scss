@@ -1,60 +1,110 @@
 @use "../abstracts/variables" as variables;
 @use "../abstracts/mixin" as mixin;
 .footer {
-	background: variables.$color-primary-dark;
-	color: variables.$color-gray-300;
+    background: variables.$color-primary-dark;
+    color: variables.$color-gray-300;
 
-	.container {
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-end;
-		padding: 3rem 4rem;
-	}
-	.logo-footer {
-		width: auto;
-		margin-bottom: 1rem;
-	}
-	.comp-info-wrap {
-		div {
-			display: inline-block;
-			margin-bottom: 0.4rem;
-			margin-right: 1rem;
-		}
-		span {
-			display: inline-block;
-			padding-right: 0.5rem;
-			font-weight: 600;
-		}
-	}
-	.copyright {
-		font-weight: 200;
-		font-size: 0.8rem;
-	}
-	&-tel-wrap {
-		font-size: 1.2rem;
-		color: #fff;
-		.tel {
-			font-size: 2rem;
-			font-weight: 600;
-		}
-	}
-	&-sms-list {
-		display: flex;
-		gap: 10px;
-		align-items: center;
-		li a {
-			display: block;
-			width: 3rem;
-			transition: 0.2s;
-			img {
-				width: 100%;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 3rem 4rem;
+    }
+    .logo-footer {
+        width: auto;
+    }
+    .comp-info-wrap {
+        div {
+            display: inline-block;
+            margin-bottom: 0.4rem;
+            margin-right: 1rem;
+        }
+        span {
+            display: inline-block;
+            padding-right: 0.5rem;
+            font-weight: 600;
+        }
+    }
+    .copyright {
+        font-weight: 200;
+        font-size: 0.8rem;
+    }
+    &-tel-wrap {
+        font-size: 1.2rem;
+        color: #fff;
+        .tel {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+    }
+    &-sms-list {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        margin-top: 10px;
+        li a {
+            display: block;
+            width: 3rem;
+            transition: 0.2s;
+            img {
+                width: 100%;
+            }
+            &:hover {
+                filter: brightness(0.7);
+            }
+        }
+        &.hidden {
+            display: none;
+        }
+    }
+    @include mixin.tablet {
+        .container {
+            padding: 2rem;
+			align-items: center;
+            .logo-footer {
+                display: none;
+            }
+            .comp-info-wrap {
+                font-size: 0.8rem;
+
+                div {
+                    margin-bottom: 0.2rem;
+                    margin-right: 0.6rem;
+                }
+            }
+        }
+		&-tel-wrap {
+            font-size: 1rem;
+			.tel{
+				font-size: 1.6rem;
+				
 			}
-			&:hover {
-				filter: brightness(0.7);
+        }
+    }
+    @include mixin.mobile {
+        .container {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 2rem;
+            gap: 2rem;
+            .logo-footer {
+                display: none;
+            }
+            .comp-info-wrap {
+                font-size: 0.8rem;
+
+                div {
+                    margin-bottom: 0.2rem;
+                    margin-right: 0.6rem;
+                }
+            }
+        }
+        &-tel-wrap {
+            font-size: 1rem;
+			.tel{
+				font-size: 1.6rem;
+				
 			}
-		}
-		&.hidden {
-			display: none;
-		}
-	}
+        }
+    }
 }

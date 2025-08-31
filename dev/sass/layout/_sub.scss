@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as variables;
+@use "../abstracts/mixin" as mixin;
 .about-wrap {
 	position: relative;
 
@@ -12,5 +13,11 @@
 	p {
 		line-height: 180%;
 		font-size: 1.1rem;
+	}
+	@include mixin.tabletAndMobile{
+		.title{
+			font-size: 2rem;
+			margin-bottom: .5rem;
+		}
 	}
 }

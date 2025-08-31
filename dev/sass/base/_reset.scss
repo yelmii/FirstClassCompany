@@ -13,6 +13,9 @@ body {
 	color: variables.$color-gray-950;
 	font-family: "NotoSansKR";
 	font-size: 15px;
+	&.scroll-none{
+		overflow: hidden;
+	}
 	&.iframe {
 		min-width: auto;
 		padding-right: 10px;
@@ -24,6 +27,7 @@ body {
 		background: lightgray;
 		font-size: 14px;
 	}
+
 }
 
 .container {
@@ -38,6 +42,7 @@ iframe {
 img {
 	border: 0;
 	width: 100%;
+	vertical-align: bottom;
 }
 
 a {

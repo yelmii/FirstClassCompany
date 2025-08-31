@@ -67,3 +67,8 @@
 		@content;
 	}
 }
+@mixin tabletAndMobile{
+	@media(max-width: 1023px){
+		@content;
+	}
+}

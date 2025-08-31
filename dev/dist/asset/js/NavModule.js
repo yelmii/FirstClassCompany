@@ -1,25 +1,15 @@
-$(function () {
-    //dom 로드 후 실행
-    NavModule.init();
-});
-$(window).on("scroll", function (e) {
-    var scrollTop = $(window).scrollTop();
-    ShowTopBtn(scrollTop);
-    if (Number(scrollTop) >= 390) {
-        $("#FloatingNav").addClass("fixed");
-    }
-    else {
-        $("#FloatingNav").removeClass("fixed");
-    }
-});
+"use strict";
+exports.__esModule = true;
+exports.NavModule = void 0;
 var NavModule = {
     init: function () {
         this.bindingEventHandle();
     },
     bindingEventHandle: function () {
-        if (this.isMain()) {
+        if (this.isMain) {
             $(window).on("scroll", function () {
                 var scrollTop = Number($(window).scrollTop());
+                console.log("scrollTop : " + scrollTop);
                 if (scrollTop <= 0) {
                     NavModule.activeHeaderStyle(false);
                 }
@@ -52,19 +42,4 @@ var NavModule = {
         }
     }
 };
-function GoToTop() {
-    $("html").animate({ scrollTop: 0 }, 500);
-}
-function ShowTopBtn(scrollTop) {
-    if (scrollTop >= 200) {
-        $("#BtnTop").fadeIn();
-    }
-    else {
-        $("#BtnTop").fadeOut();
-    }
-}
-function MobileNav() {
-    $("#M_Header").toggleClass("on");
-    $("#M_Nav").toggleClass("on");
-    $("body").toggleClass("scroll-none");
-}
+exports.NavModule = NavModule;

@@ -10,7 +10,6 @@
 	"compile-hero.scss-output-toggle": false,
 	"compile-hero.disable-compile-files-on-did-save-code": false,
 	"html.suggest.html5": true,
-	"editor.defaultFormatter": "okitavera.vscode-nunjucks-formatter",
 	"emmet.includeLanguages": {
 		"njk": "html",
 		"nunjucks": "html"
@@ -19,7 +18,4 @@
 		"*html": "html",
 		"*njk": "html"
 	},
-	"nunjucksFormat.style": true,
-	"nunjucksFormat.tagmerge": true,
-	"nunjucksFormat.tagsort": true
 }
