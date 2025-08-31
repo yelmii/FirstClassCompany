@@ -20,9 +20,6 @@ body {
 		min-width: auto;
 		padding-right: 10px;
 	}
-	@include mixin.tablet {
-		background: lightgreen;
-	}
 	@include mixin.mobile {
 		background: lightgray;
 		font-size: 14px;
