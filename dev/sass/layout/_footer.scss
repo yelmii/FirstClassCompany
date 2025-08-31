@@ -24,7 +24,13 @@
             display: inline-block;
             padding-right: 0.5rem;
             font-weight: 600;
+            &.color-white{
+                font-weight: 400;
+                padding-right: 0;
+                color: #fff;
+            }
         }
+
     }
     .copyright {
         font-weight: 200;
@@ -36,6 +42,7 @@
         .tel {
             font-size: 2rem;
             font-weight: 600;
+            color: #fff;
         }
     }
     &-sms-list {
