@@ -21,7 +21,6 @@ body {
 		padding-right: 10px;
 	}
 	@include mixin.mobile {
-		background: lightgray;
 		font-size: 14px;
 	}
 
