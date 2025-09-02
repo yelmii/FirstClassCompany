@@ -7,15 +7,14 @@ permalink: /index.html
     <section class="main-banner">
         <div class="container">
             <div>
-
-            <div class="main-banner-title-sub">도시가스 배관시공은</div>
-            <div class="main-banner-title mb-20">
-                일등 도시가스
-            </div>
-            <div class="btn-right">
-                <a href="/gallery" title="시공사례" class="btn-primary-dark">시공사례 확인하기</a>
-                <a href="/quote" title="견적문의" class="btn-primary-light">견적문의하기</a>
-            </div>
+                <div class="main-banner-title-sub">도시가스 배관시공은</div>
+                <div class="main-banner-title mb-20">
+                    일등 도시가스
+                </div>
+                <div class="btn-right">
+                    <a href="/gallery" title="시공사례" class="btn-primary-dark">시공사례 확인하기</a>
+                    <a href="/quote" title="견적문의" class="btn-primary-light">견적문의하기</a>
+                </div>
             </div>
         </div>
     </section>
@@ -23,7 +22,8 @@ permalink: /index.html
         <section class="container section">
             <h3 class="main-title mb-10">현장에서 증명된 기술력</h3>
             <h4 class="main-title-sub mb-20">다양한 산업과 공간에 맞춤시공한 사례를 확인하세요.</h3>
-            <ul class="main-list-1">
+                <ul class="main-list-1">
+                <!--메인 시공사례 Start-->
                 {% for i in range(0, 3) %} 
                     <li>
                         <a href="#none">
@@ -35,6 +35,7 @@ permalink: /index.html
                         </a>
                     </li>
                 {%endfor%}
+                <!--메인 시공사례 End-->
             </ul>
         </section>
         <section  class="container section">
