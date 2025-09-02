@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="format-detection" content="telephone=no, address=no, email=no" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>일등도시가스</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="format-detection" content="telephone=no, address=no, email=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta data-rh="true" name="description" content="본문내용(해시태그)" />
+		<meta data-rh="true" property="og:url" content="현재url https 부터 작성해야함" />
+		<meta data-rh="true" property="og:type" content="article  ?? 뭔지 찾아보기" />
+		<meta data-rh="true" property="og:title" content="본문 제목" />
+		<meta data-rh="true" property="og:description" content="본문내용(해시태그)" />
+		<meta data-rh="true" property="og:image" content="공유썸네일 url" />
+		<meta data-rh="true" name="twitter:card" content="summary_large_image" />
+		<meta data-rh="true" name="twitter:title" content="title" />
+		<meta data-rh="true" name="twitter:description" content="본문내용(해시태그)" />
+		<meta data-rh="true" name="twitter:image" content="공유썸네일 url" />
+		<meta data-rh="true" property="fb:app_id" content="203040656938507 ?? 뭔지 찾아보기" />
+
+		<title>{{ title }}</title>
 		<script type="text/javascript" src="./asset/lib/jquery-3.7.1.min.js"></script>
 		<script type="text/javascript" src="./asset/js/Common.js"></script>
-        <link rel="stylesheet" href="asset/css/Common.min.css" />
-        
-    </head>
-    <body>
-        <!--
+		<link rel="stylesheet" href="asset/css/Common.min.css" />
+	</head>
+	<body>
+		<!--
         <a href="#">메뉴로 바로가기</a>
         -->
-        {%include "_header.njk"%}
-        {{ content | safe }}
-        {%include "_footer.njk"%}
-        {%include "_leftFloatingNav.njk"%}
-
-    </body>
+		{%include "_header.njk"%}
+		{{ content | safe }}
+		{%include "_footer.njk"%} {%include "_leftFloatingNav.njk"%}
+	</body>
 </html>

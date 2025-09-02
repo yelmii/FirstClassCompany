@@ -1,0 +1,41 @@
+---
+layout: _layout.njk
+title: 일등도시가스 | 도시가스시공 > 시공후기
+permalink: /galleryDetails.html
+---
+
+<div class="page-title-wrap">
+	<div class="container">
+		<div>
+			<h2 class="page-title">시공후기</h2>
+			안전하고 깔끔한 시공사례를 확인해보세요.
+		</div>
+	</div>
+</div>
+
+<section class="container section-sub">
+	<h3 id="Title" class="title-sub"></h3>
+	<h3 id="Cont" class="p"></h3>
+	<div id="ImgWrap" class="width-80 m-auto"></div>
+	<div id="HashTag"></div>
+</section>
+<script>
+	var urlSearch = window.location.search.split("&");
+	var galleryIndex = urlSearch[0].split("=")[1];
+	var imgCount = urlSearch[1].split("=")[1];
+	var html = "";
+	for (var i = 1; i <= imgCount; i++) {
+		html += `<img src="asset/images/gallery/g_${galleryIndex}_${i}.png" alt="시공예시${galleryIndex}_${i}">`;
+	}
+	$("#ImgWrap").html(html);
+	//seo
+	var title = localStorage.getItem("title");
+	var subTitle = localStorage.getItem("subTitle");
+	var hasTag = localStorage.getItem("hasTag");
+	$("#HashTag").html(hasTag);
+	$("#Title").html(title);
+	$("#Cont").html(subTitle);
+	localStorage.removeItem("title");
+	localStorage.removeItem("subTitle");
+	localStorage.removeItem("hasTag");
+</script>

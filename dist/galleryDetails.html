@@ -16,7 +16,7 @@
 		<meta data-rh="true" name="twitter:image" content="공유썸네일 url" />
 		<meta data-rh="true" property="fb:app_id" content="203040656938507 ?? 뭔지 찾아보기" />
 
-		<title>일등도시가스 | 도시가스시공 &gt; 견적문의</title>
+		<title>일등도시가스 | 도시가스시공 &gt; 시공후기</title>
 		<script type="text/javascript" src="./asset/lib/jquery-3.7.1.min.js"></script>
 		<script type="text/javascript" src="./asset/js/Common.js"></script>
 		<link rel="stylesheet" href="asset/css/Common.min.css" />
@@ -83,35 +83,38 @@
 <div class="page-title-wrap">
 	<div class="container">
 		<div>
-			<h2 class="page-title">견적문의</h2>
-			전화상담을 통해 견적을 확인해보세요.
+			<h2 class="page-title">시공후기</h2>
+			안전하고 깔끔한 시공사례를 확인해보세요.
 		</div>
 	</div>
 </div>
-<section class="container section-sub text-center">
-	<h3>
-		<span class="highlight">시공 파트너를 찾고 계신가요?</span>
-	</h3>
-	<p class="mb-60 p">
-		일등도시가스는 수십 년간 도시가스 시공 분야에서 안전과 신뢰를 최우선으로 해왔습니다.<br />
-		다양한 현장 경험과 체계적인 관리 시스템을 바탕으로 고객의 요구에 최적화된 솔루션을 제공합니다. <br />
-		<br />
-		복잡한 절차 없이 간단한 상담만으로도 귀사의 프로젝트에 가장 적합한 견적을 안내해드립니다.
-	</p>
 
-	<img src="asset/images/logo.png" alt="일등도시가스 로고" class="width-auto mb-60" />
-
-	<div class="bg-contact">
-		<div class="cont-wrap">
-			<div class="title">
-				일등도시가스,<br />
-				다년간의 경험과 기술로 귀사의 프로젝트에 함께합니다.
-			</div>
-			<a href="tel:02-476-6230" class="tel"> 02-476-6230 </a>
-			<div>전화로 무료 견적상담을 받아보세요.</div>
-		</div>
-	</div>
+<section class="container section-sub">
+	<h3 id="Title" class="title-sub"></h3>
+	<h3 id="Cont" class="p"></h3>
+	<div id="ImgWrap" class="width-80 m-auto"></div>
+	<div id="HashTag"></div>
 </section>
+<script>
+	var urlSearch = window.location.search.split("&");
+	var galleryIndex = urlSearch[0].split("=")[1];
+	var imgCount = urlSearch[1].split("=")[1];
+	var html = "";
+	for (var i = 1; i <= imgCount; i++) {
+		html += `<img src="asset/images/gallery/g_${galleryIndex}_${i}.png" alt="시공예시${galleryIndex}_${i}">`;
+	}
+	$("#ImgWrap").html(html);
+	//seo
+	var title = localStorage.getItem("title");
+	var subTitle = localStorage.getItem("subTitle");
+	var hasTag = localStorage.getItem("hasTag");
+	$("#HashTag").html(hasTag);
+	$("#Title").html(title);
+	$("#Cont").html(subTitle);
+	localStorage.removeItem("title");
+	localStorage.removeItem("subTitle");
+	localStorage.removeItem("hasTag");
+</script>
 
 		
 <footer class="footer">
