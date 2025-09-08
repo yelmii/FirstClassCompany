@@ -34,5 +34,9 @@
 		{%include "_header.njk"%}
 		{{ content | safe }}
 		{%include "_footer.njk"%} {%include "_leftFloatingNav.njk"%}
+		<script>
+			var href = window.location.href;
+			$("#Meta_Url").attr("content", href);
+		</script>
 	</body>
 </html>

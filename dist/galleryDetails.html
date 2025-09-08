@@ -124,7 +124,7 @@
 	$("#Cont").html(subTitle);
 	$("#HashTag").html(html);
 
-	var metaIdArr = ["Meta_Title", "Meta_Title2", "Meta_Description", "Meta_Description2", "Meta_Url"];
+	var metaIdArr = ["Meta_Title", "Meta_Title2", "Meta_Description", "Meta_Description2", ""];
 
 	for (var id of metaIdArr) {
 		console.log("id : " + id);
@@ -132,9 +132,6 @@
 			$("#" + id).attr("content", title);
 		} else if (id.indexOf("Description") > -1) {
 			$("#" + id).attr("content", subTitle + " " + hashTag);
-		} else if (id.indexOf("Url") > -1) {
-			var href = window.location.href;
-			$("#" + id).attr("content", href);
 		}
 	}
 </script>
@@ -214,5 +211,9 @@
 </button>
 <!--맨위로 버튼 End-->
 
+		<script>
+			var href = window.location.href;
+			$("#Meta_Url").attr("content", href);
+		</script>
 	</body>
 </html>
