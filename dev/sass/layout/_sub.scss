@@ -14,10 +14,23 @@
 		line-height: 180%;
 		font-size: 1.1rem;
 	}
-	@include mixin.tabletAndMobile{
-		.title{
+	@include mixin.tabletAndMobile {
+		.title {
 			font-size: 2rem;
-			margin-bottom: .5rem;
+			margin-bottom: 0.5rem;
 		}
+	}
+}
+.title-sub {
+	font-size: 2rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+	text-align: center;
+}
+.gallery-detail-img-wrap {
+	width: 70%;
+	margin: 2rem auto;
+	@include mixin.mobile {
+		width: 100%;
 	}
 }

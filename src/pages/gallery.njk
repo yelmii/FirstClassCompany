@@ -24,7 +24,7 @@ permalink: /gallery.html
 				<div class="cont-wrap">
 					<h4 id="title_{{ i }}" class="title">시공업체명 {{ i }}</h4>
 					<h5 id="subTitle_{{ i }}" class="title-sub">시공업체{{ i }} 블로그 게시글의 첫 줄을 작성하면 됩니다. 길게 작성하더라도 한줄만 보이고, 2줄 이상 보이게 하고싶으면 연락주세요.</h5>
-					<div id="hasTag_{{ i }}" class="hidden">강동구도시가스 도시가스시공 시공업체</div>
+					<div id="hashTag_{{ i }}" class="hidden">강동구도시가스 도시가스시공 시공업체</div>
 				</div>
 			</a>
 		</li>
@@ -35,11 +35,11 @@ permalink: /gallery.html
 	function SetStorage(index, count) {
 		var title = $("#title_" + index).html();
 		var subTitle = $("#subTitle_" + index).html();
-		var hasTag = $("#hasTag_" + index).html();
+		var hashTag = $("#hashTag_" + index).html();
 
 		localStorage.setItem("title", title);
 		localStorage.setItem("subTitle", subTitle);
-		localStorage.setItem("hasTag", hasTag);
+		localStorage.setItem("hashTag", hashTag);
 		location.href = "/galleryDetails?idx=" + index + "&imgCount=" + count;
 	}
 </script>

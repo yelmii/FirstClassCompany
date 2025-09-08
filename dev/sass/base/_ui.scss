@@ -204,6 +204,19 @@ $btnColors: (
 		}
 	}
 }
+.hash-tag-list {
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+	span {
+		padding: 4px 10px;
+		font-size: 0.8rem;
+		color: variables.$color-gray-400;
+		border: 1px solid variables.$color-gray-400;
+		border-radius: 15px;
+	}
+}
+
 .btn-top {
 	display: none;
 	cursor: pointer;
