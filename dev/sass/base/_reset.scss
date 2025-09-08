@@ -13,7 +13,7 @@ body {
 	color: variables.$color-gray-950;
 	font-family: "NotoSansKR";
 	font-size: 15px;
-	&.scroll-none{
+	&.scroll-none {
 		overflow: hidden;
 	}
 	&.iframe {
@@ -23,7 +23,6 @@ body {
 	@include mixin.mobile {
 		font-size: 14px;
 	}
-
 }
 
 .container {
@@ -112,4 +111,7 @@ textarea {
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	display: block;
+}
+.hidden {
+	display: none;
 }
