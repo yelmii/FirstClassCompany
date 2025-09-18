@@ -5,21 +5,19 @@
 		<link rel="icon" href="https://gasnetwork.netlify.app/favicon.ico" />
 		<meta name="format-detection" content="telephone=no, address=no, email=no" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta
-			data-rh="true"
-			name="description"
-			content="도시가스 전문 시공업체 일등도시가스입니다. 도시가스배관공사,도시가스공사업체,도시가스철거공사업체,도시가스배관공사비용,도시가스배관공사견적,도시가스시공업체"
-		/>
-		<meta
-			data-rh="true"
-			name="keywords"
-			content="도시가스 전문 시공업체 일등도시가스입니다. 도시가스배관공사,도시가스공사업체,도시가스철거공사업체,도시가스배관공사비용,도시가스배관공사견적,도시가스시공업체"
-		/>
+		{% if item %}
+		<meta name="description" content="도시가스 시공업체 일등도시가스입니다. 안전하고 깔끔한 {{ item.description }} 시공사례를 확인해보세요." />
+		<meta name="keywords" content="{{ item.hashtag | join(', ') }}" />
+		<meta data-rh="true" property="og:url" content="https://gasnetwork.netlify.app/galleryDetails/page_{{ item.slug }}" />
+		{% else %}
+		<meta data-rh="true" name="description" content="{{ description }}" />
+		<meta data-rh="true" name="keywords" content="일등도시가스,도시가스배관공사,도시가스공사업체,도시가스철거공사업체,도시가스배관공사비용,도시가스배관공사견적,도시가스시공업체" />
+		<meta data-rh="true" property="og:url" content="https://gasnetwork.netlify.app{{ url }}" />
+		{% endif %}
 		<meta data-rh="true" property="og:type" content="website" />
 
-		<meta data-rh="true" id="Meta_Url" property="og:url" content="" />
-		<meta data-rh="true" id="Meta_Title" property="og:title" content="{{ title }}" />
-		<meta data-rh="true" id="Meta_Description" property="og:description" content="도시가스 전문 시공업체 일등도시가스입니다." />
+		<meta data-rh="true" property="og:title" content="{{ title }}" />
+		<meta data-rh="true" property="og:description" content="{{ description }}" />
 
 		<meta data-rh="true" property="og:image" content="https://gasnetwork.netlify.app/asset/images/thumbnail.png" />
 		<meta data-rh="true" property="og:site_name" content="일등도시가스" />
@@ -27,8 +25,8 @@
 
 		<meta data-rh="true" name="twitter:image" content="https://gasnetwork.netlify.app/asset/images/thumbnail.png" />
 
-		<meta data-rh="true" id="Meta_Title2" name="twitter:title" content="title" />
-		<meta data-rh="true" id="Meta_Description2" name="twitter:description" content="도시가스 전문 시공업체 일등도시가스입니다." />
+		<meta data-rh="true" name="twitter:title" content="{{ title }}" />
+		<meta data-rh="true" name="twitter:description" content="{{ description }}" />
 
 		<title>{{ title }}</title>
 		<script type="text/javascript" src="{{ assetroot }}/lib/jquery-3.7.1.min.js"></script>
@@ -36,9 +34,6 @@
 		<link rel="stylesheet" href="{{ assetroot }}/css/Common.min.css" />
 	</head>
 	<body>
-		<!--
-        <a href="#">메뉴로 바로가기</a>
-        -->
 		{%include "_header.njk"%}
 		{{ content | safe }}
 		{%include "_footer.njk"%} {%include "_leftFloatingNav.njk"%}

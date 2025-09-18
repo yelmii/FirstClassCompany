@@ -34,19 +34,12 @@
 		<li><a href="/quote">견적문의</a></li>
 		<li><a href="/gallery">시공후기</a></li>
 	</ul>
-	<div class="sns-list {{'' if setting.snsShow else 'hidden'}}">
-		<a href="{{ setting.kakaoURL }}" alt="일등도시가스 카카오톡 상담하기" title="일등도시가스 카카오톡 상담하기">
-			<img src="{{ assetroot }}/images/icon-kakao.png" alt="유튜브로고" />
+	<div class="sns-list">
+		{% for sns in setting.snsInfo %} {% if sns.isShow == true %}
+		<a href="{{ sns.url }}" alt="일등도시가스 {{ sns.name }}" title="일등도시가스 {{ sns.name }}">
+			<img src="{{ assetroot }}{{ sns.iconPath }}" alt="{{ sns.name }}로고" />
 		</a>
-		<a href="{{ setting.instaURL }}" alt="일등도시가스 인스타그램 바로가기" title="일등도시가스 인스타그램 바로가기">
-			<img src="{{ assetroot }}/images/icon-insta.png" alt="유튜브로고" />
-		</a>
-		<a href="{{ setting.nBlogURL }}" alt="일등도시가스 네이버블로그 바로가기" title="일등도시가스 네이버블로그 바로가기">
-			<img src="{{ assetroot }}/images/icon-blog.png" alt="유튜브로고" />
-		</a>
-		<a href="{{ setting.youtubeURL }}" alt="일등도시가스 유튜브 바로가기" title="일등도시가스 유튜브 바로가기">
-			<img src="{{ assetroot }}/images/icon-youtube.png" alt="유튜브로고" />
-		</a>
+		{% endif %} {% endfor %}
 	</div>
 </nav>
 <!--태블릿 & 모바일버전 End-->
