@@ -2,12 +2,13 @@
 layout: _layout.njk
 title: 일등도시가스 | 도시가스시공
 permalink: /index.html
+assetroot: ./asset
 ---
 <main>
     <section class="main-banner">
         <div class="container">
             <div>
-                <div class="main-banner-title-sub">도시가스 배관시공은</div>
+                <div class="main-banner-title-sub">서울/경기 도시가스 시공전문</div>
                 <div class="main-banner-title mb-20">
                     일등 도시가스
                 </div>
@@ -21,7 +22,7 @@ permalink: /index.html
     <div class="bg-pipe">
         <section class="container section">
             <h3 class="main-title mb-10">현장에서 증명된 기술력</h3>
-            <h4 class="main-title-sub mb-20">다양한 산업과 공간에 맞춤시공한 사례를 확인하세요.</h3>
+            <h4 class="main-title-sub mb-20">다양한 산업과 공간에 맞춤 시공한 사례를 확인하세요.</h3>
                 <ul class="main-list-1">
                 <!--메인 시공사례 Start-->
                 {% for i in range(0, 3) %} 
@@ -40,23 +41,42 @@ permalink: /index.html
         </section>
         <section  class="container section">
             <ul class="main-list-2">
-                {% for i in range(1, 7) %} 
-                    {%if i == 3%}
-                        <li>
-                            <div class="cont">
-                                기술을 연결하고,<br>
-                                안전을 이어갑니다.
-                            </div>
-                        </li>
-                    {%else%}
-                        <li>
-                            <div class="cont">
-                                <span class="title">상업 및 업무용 배관 시공</span>
-                                음식점, 상가, 오피스 등 다양한 현장 경험 보유
-                            </div>
-                        </li>
-                    {%endif%}
-                {%endfor%}
+                <li>
+                    <div class="cont">
+                        <span class="title">상업 및 업무용 배관 시공</span>
+                        음식점, 상가, 오피스, 학교 등 다양한 현장경험 보유
+                    </div>
+                </li>
+                <li>
+                    <div class="cont">
+                        <span class="title">주거용 가스 배관 시공</span>
+                        아파트,빌라 등 공동주택 대상 맞춤형 시공
+                    </div>
+                </li>
+                <li>
+                    <div class="cont">
+                        기술을 연결하고,<br>
+                        안전을 이어갑니다.
+                    </div>
+                </li>
+                <li>
+                    <div class="cont">
+                        <span class="title">산업용 배관 시스템 구축</span>
+                        대형 공장 및 생산시설을 위한 가스배관 설계 및 시공
+                    </div>
+                </li>
+                <li>
+                    <div class="cont">
+                        <span class="title">도시가스 관로 시공</span>
+                        중,저압 도시가스관의 도로 및 단지내 매립 시공
+                    </div>
+                </li>
+                <li>
+                    <div class="cont">
+                        <span class="title">도시가스 철거</span>
+                        음식점,상가,오피스,학교 등 도시가스 배관 시설 철거
+                    </div>
+                </li>
             </ul>
         </section>
     </div>

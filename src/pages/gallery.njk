@@ -2,6 +2,7 @@
 layout: _layout.njk
 title: 일등도시가스 | 도시가스시공 > 시공후기
 permalink: /gallery.html
+assetroot: ./asset
 ---
 
 <div class="page-title-wrap">
@@ -15,17 +16,20 @@ permalink: /gallery.html
 
 <section class="container section-sub">
 	<ul class="gallery-list">
-		<!--시공사례 Start-->
-		{% for i in range(0, 13) %}
+		{% for item in gallery %}
 		<li>
-			<a href="javascript:SetStorage({{ i }}, 2)" title="제목">
+			<a href="/galleryDetails/page_{{ item.slug }}" title="{{ item.title }}">
 				<div class="img-wrap">
-					<img src="asset/images/gallery/g_{{ i }}_1.png" alt="제목" />
+					<img src="asset/images/gallery/g_{{ item.slug }}_1.png" alt="{{ item.title }}" />
 				</div>
 				<div class="cont-wrap">
-					<h4 id="title_{{ i }}" class="title">시공업체명 {{ i }}</h4>
-					<h5 id="subTitle_{{ i }}" class="title-sub">시공업체{{ i }} 블로그 게시글의 첫 줄을 작성하면 됩니다. 길게 작성하더라도 한줄만 보이고, 2줄 이상 보이게 하고싶으면 연락주세요.</h5>
-					<div id="hashTag_{{ i }}" class="hidden">강동구도시가스 도시가스시공 시공업체</div>
+					<h4 class="title">{{ item.title }}</h4>
+					<h5 class="title-sub">{{ item.description }}</h5>
+					<div class="hidden">
+						{% for tag in item.hashtag %}
+						<span>#{{ tag }}</span>
+						{% endfor %}
+					</div>
 				</div>
 			</a>
 		</li>

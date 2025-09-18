@@ -2,7 +2,7 @@
 <footer class="footer">
 	<div class="container">
 		<section class="flex-ai-center gap-30">
-			<img src="asset/images/logo-w.png" class="logo-footer" alt="일등도시가스 로고" title="일등도시가스 홈으로 이동" />
+			<img src="{{ assetroot }}/images/logo-w.png" class="logo-footer" alt="일등도시가스 로고" title="일등도시가스 홈으로 이동" />
 			<div>
 				<address class="comp-info-wrap">
 					<div><span>대표</span>이재필</div>
@@ -21,20 +21,22 @@
 				문의 및 견적상담<br />
 				<span class="tel">02-476-6230</span>
 			</p>
-			<ul class="footer-sms-list">
+			<!--하단 SNS 영역 Start-->
+			<ul class="footer-sms-list {{'' if setting.snsShow else 'hidden'}}">
 				<li>
-					<a href="http://"><img src="asset/images/icon-kakao-w.png" alt="일등도시가스 카카오톡채널" title="일등도시가스 카카오톡채널" /></a>
+					<a href=""><img src="{{ assetroot }}/images/icon-kakao-w.png" alt="일등도시가스 카카오톡채널" title="일등도시가스 카카오톡채널" /></a>
 				</li>
 				<li>
-					<a href="http://"><img src="asset/images/icon-insta-w.png" alt="일등도시가스 인스타그램" title="일등도시가스 인스타그램" /></a>
+					<a href=""><img src="{{ assetroot }}/images/icon-insta-w.png" alt="일등도시가스 인스타그램" title="일등도시가스 인스타그램" /></a>
 				</li>
 				<li>
-					<a href="http://"><img src="asset/images/icon-blog-w.png" alt="일등도시가스 네이버블로그" title="일등도시가스 네이버블로그" /></a>
+					<a href=""><img src="{{ assetroot }}/images/icon-blog-w.png" alt="일등도시가스 네이버블로그" title="일등도시가스 네이버블로그" /></a>
 				</li>
 				<li>
-					<a href="http://"><img src="asset/images/icon-youtube-w.png" alt="일등도시가스 유튜브채널" title="일등도시가스 유튜브채널" /></a>
+					<a href=""><img src="{{ assetroot }}/images/icon-youtube-w.png" alt="일등도시가스 유튜브채널" title="일등도시가스 유튜브채널" /></a>
 				</li>
 			</ul>
+			<!--하단 SNS 영역 End-->
 		</section>
 	</div>
 </footer>

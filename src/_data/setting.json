@@ -1,0 +1,29 @@
+{
+	"floatngNavIsShow": true,
+	"snsInfo": [
+		{
+			"name": "카카오톡",
+			"iconPath": "/images/icon-kakao.png",
+			"isShow": true,
+			"url": "/test/page1"
+		},
+		{
+			"name": "인스타그램",
+			"iconPath": "/images/icon-insta.png",
+			"isShow": true,
+			"url": "/test/page2"
+		},
+		{
+			"name": "네이버블로그",
+			"iconPath": "/images/icon-blog.png",
+			"isShow": true,
+			"url": "/test/page3"
+		},
+		{
+			"name": "유튜브",
+			"iconPath": "/images/icon-youtube.png",
+			"isShow": true,
+			"url": "/test/page4"
+		}
+	]
+}

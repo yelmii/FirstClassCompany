@@ -1,53 +1,53 @@
 {% block header %}
 <!--PC버전 Start-->
 <header id="header" class="header">
-    <div class="container">
-        <a href="/" class="logo" alt="일등도시가스 로고" title="일등도시가스 로고">
-            <img src="./asset/images/logo-w.png" id="HeaderLogo" alt="일등도시가스 로고" />
-        </a>
-        <nav class="nav">
-            <ul>
-                <li><a href="/about">일등도시가스</a></li>
-                <li><a href="/quote">견적문의</a></li>
-                <li><a href="/gallery">시공후기</a></li>
-            </ul>
-        </nav>
-    </div>
+	<div class="container">
+		<a href="/" class="logo" alt="일등도시가스 로고" title="일등도시가스 로고">
+			<img src="{{ assetroot }}/images/logo-w.png" id="HeaderLogo" alt="일등도시가스 로고" />
+		</a>
+		<nav class="nav">
+			<ul>
+				<li><a href="/about">일등도시가스</a></li>
+				<li><a href="/quote">견적문의</a></li>
+				<li><a href="/gallery">시공후기</a></li>
+			</ul>
+		</nav>
+	</div>
 </header>
 <!--PC버전 End-->
 
 <!--태블릿 & 모바일버전 Start-->
 <header id="M_Header" class="m-header">
-    <a href="/" class="logo" alt="일등도시가스 로고" title="일등도시가스 로고">
-        <img src="./asset/images/logo.png" id="HeaderLogo" alt="일등도시가스 로고" />
-    </a>
-    <a href="#none" id="Btn_M_Nav" class="btn-nav" onclick="MobileNav()">
-        메뉴
-        <span></span>
-        <span></span>
-        <span></span>
-    </a>
+	<a href="/" class="logo" alt="일등도시가스 로고" title="일등도시가스 로고">
+		<img src="{{ assetroot }}/images/logo.png" id="HeaderLogo" alt="일등도시가스 로고" />
+	</a>
+	<a href="#none" id="Btn_M_Nav" class="btn-nav" onclick="MobileNav()">
+		메뉴
+		<span></span>
+		<span></span>
+		<span></span>
+	</a>
 </header>
 <nav id="M_Nav" class="m-nav">
-    <ul>
-        <li><a href="/about">일등도시가스</a></li>
-        <li><a href="/quote">견적문의</a></li>
-        <li><a href="/gallery">시공후기</a></li>
-    </ul>
-    <div class="sns-list">
-        <a href="https://" alt="일등도시가스 카카오톡 상담하기" title="일등도시가스 카카오톡 상담하기">
-            <img src="asset/images/icon-kakao.png" alt="유튜브로고" />
-        </a>
-        <a href="https://" alt="일등도시가스 인스타그램 바로가기" title="일등도시가스 인스타그램 바로가기">
-            <img src="asset/images/icon-insta.png" alt="유튜브로고" />
-        </a>
-        <a href="https://" alt="일등도시가스 네이버블로그 바로가기" title="일등도시가스 네이버블로그 바로가기">
-            <img src="asset/images/icon-blog.png" alt="유튜브로고" />
-        </a>
-        <a href="https://" alt="일등도시가스 유튜브 바로가기" title="일등도시가스 유튜브 바로가기">
-            <img src="asset/images/icon-youtube.png" alt="유튜브로고" />
-        </a>
-    </div>
+	<ul>
+		<li><a href="/about">일등도시가스</a></li>
+		<li><a href="/quote">견적문의</a></li>
+		<li><a href="/gallery">시공후기</a></li>
+	</ul>
+	<div class="sns-list {{'' if setting.snsShow else 'hidden'}}">
+		<a href="{{ setting.kakaoURL }}" alt="일등도시가스 카카오톡 상담하기" title="일등도시가스 카카오톡 상담하기">
+			<img src="{{ assetroot }}/images/icon-kakao.png" alt="유튜브로고" />
+		</a>
+		<a href="{{ setting.instaURL }}" alt="일등도시가스 인스타그램 바로가기" title="일등도시가스 인스타그램 바로가기">
+			<img src="{{ assetroot }}/images/icon-insta.png" alt="유튜브로고" />
+		</a>
+		<a href="{{ setting.nBlogURL }}" alt="일등도시가스 네이버블로그 바로가기" title="일등도시가스 네이버블로그 바로가기">
+			<img src="{{ assetroot }}/images/icon-blog.png" alt="유튜브로고" />
+		</a>
+		<a href="{{ setting.youtubeURL }}" alt="일등도시가스 유튜브 바로가기" title="일등도시가스 유튜브 바로가기">
+			<img src="{{ assetroot }}/images/icon-youtube.png" alt="유튜브로고" />
+		</a>
+	</div>
 </nav>
 <!--태블릿 & 모바일버전 End-->
 {% endblock header %}

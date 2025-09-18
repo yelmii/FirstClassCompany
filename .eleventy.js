@@ -4,10 +4,11 @@ module.exports = function (eleventyConfig) {
 			input: "src/pages",
 			includes: "../_Shared",
 			output: "dist",
+			data: "../_data",
 		},
 		templateFormats: ["njk", "md", "html"],
 		htmlTemplateEngine: "njk",
-    	markdownTemplateEngine: "njk"
+		markdownTemplateEngine: "njk",
 	};
 };
 /*

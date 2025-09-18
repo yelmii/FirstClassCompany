@@ -40,14 +40,19 @@ var NavModule = {
         return false;
     },
     activeHeaderStyle: function (isActive) {
+        var src = $("#HeaderLogo").attr("src").toString();
         if (isActive) {
             //흰배경
-            $("#HeaderLogo").attr("src", "./asset/images/logo.png");
+            var replace = src.replace("logo-w.png", "logo.png");
+            $("#HeaderLogo").attr("src", replace);
+            //$("#HeaderLogo").attr("src", "./asset/images/logo.png");
             $("#header").addClass("on");
         }
         else {
             //투명배경
-            $("#HeaderLogo").attr("src", "./asset/images/logo-w.png");
+            var replace = src.replace("logo.png", "logo-w.png");
+            $("#HeaderLogo").attr("src", replace);
+            //$("#HeaderLogo").attr("src", "./asset/images/logo-w.png");
             $("#header").removeClass("on");
         }
     }

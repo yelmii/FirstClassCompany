@@ -1,7 +1,12 @@
 ---
-layout: _layout.njk
-title: 일등도시가스 | 도시가스시공 > 시공후기
-permalink: /galleryDetails.html
+pagination: 
+  data: gallery 
+  size: 1 
+  alias: item 
+permalink: "galleryDetails/page_{{ item.slug }}.html" 
+layout: _layout.njk 
+title: 일등도시가스 | 도시가스시공 > 시공후기 
+assetroot: ../asset
 ---
 
 <div class="page-title-wrap">
@@ -14,42 +19,16 @@ permalink: /galleryDetails.html
 </div>
 
 <section class="container section-sub">
-	<h3 id="Title" class="title-section-sub"></h3>
-	<p id="Cont" class="p text-center"></p>
-	<div id="ImgWrap" class="gallery-detail-img-wrap"></div>
-	<div id="HashTag" class="hash-tag-list"></div>
+	<h3 class="title-section-sub">{{item.title}}</h3>
+	<p class="p text-center">{{item.description}}</p>
+	<div class="gallery-detail-img-wrap">
+		{%for i in range(1, item.imgCount+1)%}
+		<img src="{{assetroot}}/images/gallery/g_{{item.slug}}_{{i}}.png" alt="{{item.title}} 시공예시">
+		{%endfor%}
+	</div>
+	<div class="hash-tag-list">
+		{%for tag in item.hashtag%}
+			<span>#{{tag}}</span>
+		{%endfor%}
+	</div>
 </section>
-<script>
-	var urlSearch = window.location.search.split("&");
-	var galleryIndex = urlSearch[0].split("=")[1];
-	var imgCount = urlSearch[1].split("=")[1];
-	var html = "";
-	for (var i = 1; i <= imgCount; i++) {
-		html += `<img src="asset/images/gallery/g_${galleryIndex}_${i}.png" alt="시공예시${galleryIndex}_${i}">`;
-	}
-	$("#ImgWrap").html(html);
-
-	//seo
-	var title = localStorage.getItem("title");
-	var subTitle = localStorage.getItem("subTitle");
-	var hashTag = localStorage.getItem("hashTag");
-	var hashTagArr = hashTag.split(" ");
-	html = "";
-	for (var item of hashTagArr) {
-		html += `<span>#${item}</span>`;
-	}
-	$("#Title").html(title);
-	$("#Cont").html(subTitle);
-	$("#HashTag").html(html);
-
-	var metaIdArr = ["Meta_Title", "Meta_Title2", "Meta_Description", "Meta_Description2", ""];
-
-	for (var id of metaIdArr) {
-		console.log("id : " + id);
-		if (id.indexOf("Title") > -1) {
-			$("#" + id).attr("content", title);
-		} else if (id.indexOf("Description") > -1) {
-			$("#" + id).attr("content", subTitle + " " + hashTag);
-		}
-	}
-</script>
